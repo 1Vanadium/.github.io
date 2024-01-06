@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云集</title>
+  <!-- 引入 bootstrap 样式文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- 引入 公共 css 文件 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 引入 主要 css 文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/bbs.css" rel="stylesheet">
+  <!-- 引入 jquery || bootstrap  -->
+  <script src="js/jQuery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <style>
+   img {
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%; /* 让头像呈圆形 */
+}
+
+  </style>
+  <script>
+    $(function () {
+      var img_ele_src = "./img/banner02.jpeg";
+      $("div>.fatie").click(function () {
+        //点击事件，显示发帖代码块
+        $(".post").show()
+      });
+
+      var img_ele_src;
+      $("img").click(function () {
+        //选择点击的图片为头像
+        img_ele_src = $(this).attr('src');
+      });
+
+      $(".btn").click(function () {
+        $(".post").hide();
+        //获得输入的标题
+        var c = $(".title").val();
+        //获得选择的版块
+        var b = $("#bankuai").val();
+        //获得输入的内容
+        var content = $(".content").val();
+        //获取系统当前时间
+        var d = new Date().toLocaleString();
+        //设置格式，给div的class设为和主页css一样
+        var a = $("<li>\n" +
+          "              <img src=" + img_ele_src + "> \n" +
+          "                <div class=\"div2\">\n" +
+          "                    <div class=\"div3\">" + "标题："+c + "</div>\n" +
+          "                    <div class=\"div4\">" +"内容："+ content + "</div>\n" +
+          "                    <div  class=\"div4\">板块：" + b + "     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    发布时间：" + d + "</div>\n" +
+          "                </div>\n" +
+          "            </li>");
+        //向选中标签的前面添加节点
+        $("section>ul").prepend(a);
+      });
+    })
+  </script>
+
+  <div class="banner banner06">
+      <div class="banner_text">
+          <!-- <h2>论坛讨论</h2> -->
+      </div>
+  </div>
+<body>
+  <!-- 头部 标题 -->
+  <!-- ... 略去部分代码 ... -->
+
+  <!-- 内容部分 -->
+  <div class="changshi">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="lt.html">论坛讨论</a></li>
+    </ol>
+
+      <div class="row">
+        <div class="bbs">
+          <div class="fatie"> <span>我要发帖</span></div>
+          <section>
+            <ul>
+              <!-- 帖子列表 -->
+              <li>
+                <!-- <img width="10px" src="./img/banner02.jpeg"> -->
+                <!-- <div class="div2">
+                  <div class="div3"><h4>论坛讨论</h4></div>
+                  <div class="div4"><h4>板块：新手报到</h4> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 发布时间：2023-1-30 17：59</div>
+                </div>
+              </li> -->
+              <!-- 其他帖子项 ... -->
+            </ul>
+          </section>
+          <!-- 发帖框 -->
+          <div class="post">
+            <input class="title" placeholder="请输入标题（1-50个字符）">
+            所属版块：<select id="bankuai">
+              <option>请选择版块</option>
+              <option>秀哈</option>
+              <option>表白墙</option>
+              <option>帮帮忙</option>
+            </select>
+            <textarea class="content" placeholder="请输入内容"></textarea>
+            <input class="btn" value="发布">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚部分 -->
+  <!-- ... 略去部分代码 ... -->
+</body>
+
+<script>
+  // ... 略去部分代码 ...
+</script>
+
+</html>

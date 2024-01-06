@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云集</title>
+    <!-- 引入 bootstrap 样式文件 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 引入 公共 css 文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入 主要 css 文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 jquery || bootstrap  -->
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+		.nav ul{
+			width:100%;
+			height:100%;
+			display: flex;
+			aliign-items :center;
+			right:5%
+		}
+		.nav ul .nax-box{
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:calc((100%/4)*1);
+			height:10px;
+			barder-radius:2px;
+			transition:.5s;
+		}
+		.nav ul li{
+			width:100%;
+			text-align:center;
+		}
+
+        .category-item img {
+    max-height: 210px; /* 设置商品图片的最大高度，可以根据需要调整 */
+    width: 100%; /* 保持图片宽度自适应父容器 */
+}
+    </style>
+
+	
+</head>
+
+<body>
+    <!-- 头部 标题 -->
+
+
+    <div class="banner banner06">
+        <div class="banner_text">
+            <!-- <h2>闲 置 交 易</h2> -->
+        </div>
+    </div>
+
+    <!-- 内容部分 -->
+
+    <div class="meishi">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="ztk - 副本.html">闲置交易</a></li>
+            </ol>
+
+           <!-- 在 <div class="row"> 中添加左侧的分类侧栏和右侧的商品列表 -->
+            <div class="nav" id="bs-example-navbar-collapse-1">
+               <!-- 中间分类侧栏 -->
+                <ul class="nav navbar-nav navbar-right">
+                   <div class="list-group" id="categoryList">
+                       <a href="#"  data-category="books">闲置书籍</a>
+                       <a href="#"  data-category="life">生活用品</a>
+                       <a href="#"  data-category="clothing">鞋服饰品</a>
+                       <a href="#"  data-category="electronics">电子设备</a>
+                       <!-- 可以根据需要添加更多分类项 -->
+                   </div>
+				</ul>
+            </div>
+           
+                <!-- 右侧的商品列表 -->
+                <div class="col-md-9" id="productList">
+                    <div class="row">
+                        <!-- 商品1 -->
+                        <div class="col-md-4 category-item" data-category="books">
+                            <div class="thumbnail">
+                                <img src="img/keben(1)(1).jpg" alt="商品2" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>二手课本</h3>
+                                    <p><span style="color: red;">20元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="books">
+                            <div class="thumbnail">
+                                <img src="img/xiaoshuo.jpg" alt="商品2" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3> 小说</h3>
+                                    <p><span style="color: red;">30元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="books">
+                            <div class="thumbnail">
+                                <img src="img/wenxue.jpg" alt="商品2" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>文学作品</h3>
+                                    <p><span style="color: red;">25元</span></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- 商品2 -->
+                        <div class="col-md-4 category-item" data-category="life">
+                            <div class="thumbnail">
+                                <img src="img/shuibei(1).jpg" alt="商品2" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>水杯</h3>
+                                    <p><span style="color: red;">20元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="life">
+                            <div class="thumbnail">
+                                <img src="img/guagou(1).jpg" alt="商品2" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3> 挂钩</h3>
+                                    <p><span style="color: red;">2元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="life">
+                            <div class="thumbnail">
+                                <img src="img/chouzhihe(1).jpg" alt="商品2" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>抽纸盒</h3>
+                                    <p><span style="color: red;">10元</span></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- 商品3 -->
+                        <div class="col-md-4 category-item" data-category="clothing">
+                            <div class="thumbnail">
+                                <img src="img/pdx(1).jpg" alt="商品3" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>平底鞋</h3>
+                                    <p><span style="color: red;">40元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="clothing">
+                            <div class="thumbnail">
+                                <img src="img/xxk.jpg" alt="商品3" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>休闲裤</h3>
+                                    <p><span style="color: red;">30元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="clothing">
+                            <div class="thumbnail">
+                                <img src="img/yrf.jpg" alt="商品3" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>羽绒服</h3>
+                                    <p><span style="color: red;">150元</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 商品4 -->
+                        <div class="col-md-4 category-item" data-category="electronics">
+                            <div class="thumbnail">
+                                <img src="img/espb(1).jpg" alt="商品4" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>二手平板</h3>
+                                    <p><span style="color: red;">1000元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="electronics">
+                            <div class="thumbnail">
+                                <img src="img/esej.jpg" alt="商品4" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>二手耳机</h3>
+                                    <p><span style="color: red;">80元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 category-item" data-category="electronics">
+                            <div class="thumbnail">
+                                <img src="img/essxb.jpg" alt="商品4" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h3>二手手写笔</h3>
+                                    <p><span style="color: red;">200元</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 可以根据需要添加更多商品 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚部分 -->
+    <footer class="footer">
+        <div class="container">
+            <p>关于我们 | 联系我们 | 友情链接</p>
+            
+        </div>
+    </footer>
+
+    <script>
+        // 使用 jQuery 简化事件绑定
+        $(document).ready(function () {
+            // 触发第一个分类的点击事件，显示默认分类的商品
+            $('#categoryList a:first').click();
+            
+            // 监听分类项的点击事件
+            $('#categoryList a').click(function (e) {
+                e.preventDefault();
+                // 移除所有分类项的 active 样式
+                $('#categoryList a').removeClass('active');
+                // 添加点击的分类项的 active 样式
+                $(this).addClass('active');
+
+                // 获取点击的分类项的 data-category 属性值
+                var category = $(this).data('category');
+
+                // 根据分类项过滤商品列表
+                $('.category-item').hide();
+                $('.category-item[data-category="' + category + '"]').show();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
